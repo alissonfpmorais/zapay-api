@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "declaration": true,
+    "declarationDir": "./dist",
+    "module": "commonjs",
+    "strict": true,
+    "noImplicitReturns": true,
+    "lib": ["es2019"],
+    "outDir": "./dist",
+    "target": "es5",
+    "moduleResolution": "node"
+  },
+  "typedocOptions": {
+    "mode": "modules",
+    "out": "docs"
+  },
+  "include": ["src/**/*"],
+  "exclude": ["node_modules", "dist"]
+}
