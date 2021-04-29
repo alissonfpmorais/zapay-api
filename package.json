@@ -1,15 +1,16 @@
 {
   "name": "ts-lib-boilerplate",
   "version": "0.1.0",
-  "description": "A boilerplate to help creating typescript libraries",
+  "description": "Zapay library wrapper to REST API",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "files": [
     "/dist"
   ],
   "scripts": {
+    "start": "ts-node -r dotenv/config ./src/index.ts",
     "build": "rimraf dist && tsc",
-    "test": "jest --coverage",
+    "test": "jest --setupFiles dotenv/config",
     "lint": "eslint src --ext .ts,.tsx",
     "lint:fix": "npm run lint -- --fix",
     "prepare": "npm run test && npm run build"
@@ -31,7 +32,9 @@
     "@types/jest": "^26.0.22",
     "@typescript-eslint/eslint-plugin": "^4.16.1",
     "@typescript-eslint/parser": "^4.16.1",
+    "axios": "^0.21.1",
     "codecov": "^3.8.1",
+    "dotenv": "^8.2.0",
     "eslint": "^7.21.0",
     "eslint-config-prettier": "^8.1.0",
     "eslint-plugin-prettier": "^3.3.1",
@@ -41,7 +44,11 @@
     "prettier": "^2.2.1",
     "rimraf": "^3.0.2",
     "ts-jest": "^26.5.3",
+    "ts-node": "^9.1.1",
     "typescript": "^4.2.3"
   },
-  "dependencies": {}
+  "dependencies": {
+    "joi": "^17.4.0",
+    "jwt-decode": "^3.1.2"
+  }
 }

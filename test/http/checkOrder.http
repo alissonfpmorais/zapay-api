@@ -1,0 +1,7 @@
+POST {{host}}/zapi/order/
+Authorization: JWT {{token}}
+Content-Type: application/json
+
+{
+  "protocol": "{{protocol}}"
+}

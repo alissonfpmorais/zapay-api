@@ -1,0 +1,10 @@
+POST {{host}}/zapi/installments/
+Authorization: JWT {{token}}
+Content-Type: application/json
+
+{
+  "protocol": "{{protocol}}",
+  "debts": [
+    "{{installment_debt}}"
+  ]
+}

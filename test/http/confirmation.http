@@ -1,0 +1,9 @@
+POST {{host}}/zapi/confirmation/
+Authorization: JWT {{token}}
+Content-Type: application/json
+
+{
+  "protocol": "{{protocol}}",
+  "state": "{{state}}",
+  "debts": "{{debts}}"
+}

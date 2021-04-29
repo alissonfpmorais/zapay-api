@@ -1,0 +1,44 @@
+POST {{host}}/zapi/checkout/
+Authorization: JWT {{token}}
+Content-Type: application/json
+
+{
+  "protocol": "{{protocol}}",
+  "debts": [
+    "{{debt}}"
+  ],
+  "installmentPlan": 4,
+  "card": {
+    "document": "00000000000",
+    "number": "4111111111111111",
+    "brand": "mastercard",
+    "holder": "Leia Morgana",
+    "expirationDate": "0721",
+    "cvv": "508",
+    "billingAddress": {
+      "zipCode": "70658196",
+      "address": "SHCES Quadra 1109 Bloco F",
+      "neighborhood": "Cruzeiro Novo",
+      "city": "Brasília",
+      "number": "221"
+    }
+  }
+}
+
+###
+
+POST {{host}}/zapi/checkout/
+Authorization: JWT {{token}}
+Content-Type: application/json
+
+{
+  "protocol": "{{protocol}}",
+  "debts": [
+    "{{debt}}"
+  ],
+  "installmentPlan": 4,
+  "pix": {
+    "document": "65498714725",
+    "name": "Leia Morgana"
+  }
+}

@@ -1,1 +1,1 @@
-export { Library } from './library';
+export { Zapay } from './zapay';

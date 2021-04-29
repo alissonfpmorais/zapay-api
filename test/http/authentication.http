@@ -1,0 +1,11 @@
+POST {{host}}/authentication/
+Content-Type: application/json
+
+{
+  "username": "{{username}}",
+  "password": "{{password}}"
+}
+
+> {%
+client.global.set("token", response.body.token);
+%}

@@ -1,0 +1,25 @@
+POST {{host}}/zapi/debts/
+Authorization: JWT {{token}}
+Content-Type: application/json
+
+{
+  "state": "{{state}}",
+  "license_plate": "{{license_plate}}",
+  "renavam": "{{renavam}}"
+}
+
+> {%
+client.global.set("protocol", response.body.protocol);
+%}
+
+###
+
+POST {{host}}/zapi/debts/?async=true
+Authorization: JWT {{token}}
+Content-Type: application/json
+
+{
+  "state": "{{state}}",
+  "license_plate": "{{license_plate}}",
+  "renavam": "{{renavam}}"
+}

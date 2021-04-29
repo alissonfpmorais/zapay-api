@@ -1,0 +1,7 @@
+POST {{host}}/zapi/endpoint-register/
+Authorization: JWT {{token}}
+Content-Type: application/json
+
+{
+  "url": "{{webhook_url}}"
+}

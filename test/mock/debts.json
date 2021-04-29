@@ -1,0 +1,55 @@
+{
+  "protocol": "9JVI0RZP",
+  "debts": [
+    {
+      "amount": 355.82,
+      "description": "IPVA 2020 - Cota Única",
+      "distinct": [
+        "BBBBBBBBBBBB",
+        "CCCCCCCCCCCC",
+        "DDDDDDDDDDDD"
+      ],
+      "due_date": "2020-02-03",
+      "id": "AAAAAAAAAAAA",
+      "title": "IPVA 2020 - Cota Única",
+      "type": "ipva"
+    },
+    {
+      "amount": 118.6,
+      "description": "IPVA 2020 - Cota 1",
+      "distinct": [
+        "AAAAAAAAAAAA"
+      ],
+      "due_date": "2020-02-03",
+      "id": "BBBBBBBBBBBB",
+      "title": "IPVA 2020 - Cota 1",
+      "type": "ipva"
+    },
+    {
+      "amount": 118.28,
+      "description": "IPVA 2020 - Cota 2",
+      "distinct": [
+        "AAAAAAAAAAAA"
+      ],
+      "due_date": "2020-03-09",
+      "id": "CCCCCCCCCCCC",
+      "title": "IPVA 2020 - Cota 2",
+      "type": "ipva"
+    },
+    {
+      "amount": 118.0,
+      "description": "IPVA 2020 - Cota 3",
+      "distinct": [
+        "AAAAAAAAAAAA"
+      ],
+      "due_date": "2020-04-08",
+      "id": "DDDDDDDDDDDD",
+      "title": "IPVA 2020 - Cota 3",
+      "type": "ipva"
+    }
+  ],
+  "vehicle": {
+    "license_plate": "AAA1111",
+    "renavam": "00000000000"
+  }
+}

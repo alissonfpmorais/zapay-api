@@ -8,7 +8,8 @@
     "lib": ["es2019"],
     "outDir": "./dist",
     "target": "es5",
-    "moduleResolution": "node"
+    "moduleResolution": "node",
+    "resolveJsonModule": true
   },
   "typedocOptions": {
     "mode": "modules",
