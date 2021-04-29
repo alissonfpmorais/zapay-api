@@ -12,8 +12,7 @@
     "build": "rimraf dist && tsc",
     "test": "jest --setupFiles dotenv/config",
     "lint": "eslint src --ext .ts,.tsx",
-    "lint:fix": "npm run lint -- --fix",
-    "prepare": "npm run test && npm run build"
+    "lint:fix": "npm run lint -- --fix"
   },
   "lint-staged": {
     "*.ts": "npm run lint:fix"
