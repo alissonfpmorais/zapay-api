@@ -13,7 +13,7 @@ describe('Testing Zapay Library', () => {
   let successZapay: Zapay;
 
   beforeAll((done) => {
-    Zapay.newInstance(httpMock, baseUrl, username, password).then((zapay) => {
+    Zapay.newInstance(username, password, baseUrl, httpMock).then((zapay) => {
       successZapay = zapay;
       done();
     });

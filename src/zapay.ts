@@ -119,7 +119,7 @@ export class Zapay {
     this._vehicleUseCase = vehicleUseCase;
   }
 
-  static async newInstance(client: HttpClient, baseUrl: string, username: string, password: string): Promise<Zapay> {
+  static async newInstance(username: string, password: string, baseUrl: string, client: HttpClient): Promise<Zapay> {
     const requestBuilder = new RequestBuilder(client);
     const zapayService = new ZapayService(requestBuilder, baseUrl);
     const authenticationUseCase = new AuthenticationUseCase(zapayService, username, password);
