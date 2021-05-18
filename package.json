@@ -27,6 +27,11 @@
     "library"
   ],
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alissonfpmorais/zapay-api.git",
+    "bugs": "https://github.com/alissonfpmorais/zapay-api/issues"
+  },
   "devDependencies": {
     "@types/jest": "^26.0.22",
     "@typescript-eslint/eslint-plugin": "^4.16.1",
