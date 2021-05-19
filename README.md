@@ -9,7 +9,7 @@ npm install --save @alissonfpmorais/zapay-api
 ```js
 import { Zapay } from '@alissonfpmorais/zapay-api';
 // or...
-const { Zapay } = require('@alissonfpmorais/zapay');
+const { Zapay } = require('@alissonfpmorais/zapay-api');
 
 async function main() {
   const zapay = await Zapay.newInstance(
