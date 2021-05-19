@@ -67,3 +67,10 @@ async function main() {
   // }
 }
 ```
+
+### TODO
+
+- [x] Create first package release
+- [x] Publish package
+- [x] Setup CI/CD
+- [ ] Write documentation
