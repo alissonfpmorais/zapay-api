@@ -7,10 +7,7 @@ export interface Renavam {
   renavam: string;
 }
 
-interface ValidateResponse {
-  value: string;
-  errors: Joi.ErrorReport;
-}
+type ValidateResponse = { value: string } | { errors: Joi.ErrorReport };
 
 export function isValidRenavam(value: string): boolean {
   if (!value || value === '') return false;
@@ -40,8 +37,8 @@ export class ZapayRenavam {
     messages: {
       'renavam.invalid': '{{#label}} must be a valid renavam',
     },
-    validate(value: string, helpers: Joi.CustomHelpers): ValidateResponse | string {
-      return isValidRenavam(value) ? value : { value, errors: helpers.error('renavam.invalid') };
+    validate(value: string, helpers: Joi.CustomHelpers): ValidateResponse {
+      return isValidRenavam(value) ? { value } : { errors: helpers.error('renavam.invalid') };
     },
   }));
   static readonly renavamValidationSchema = ZapayRenavam.customJoi.renavam();
