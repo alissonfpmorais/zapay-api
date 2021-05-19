@@ -125,13 +125,34 @@ export class Zapay {
     const authenticationUseCase = new AuthenticationUseCase(zapayService, username, password);
     await authenticationUseCase.authentication();
 
-    const checkOrderUseCase = new CheckOrderUseCase(zapayService, authenticationUseCase.getTokenOrThrow);
-    const checkoutUseCase = new CheckoutUseCase(zapayService, authenticationUseCase.getTokenOrThrow);
-    const confirmationUseCase = new ConfirmationUseCase(zapayService, authenticationUseCase.getTokenOrThrow);
-    const debtsUseCase = new DebtsUseCase(zapayService, authenticationUseCase.getTokenOrThrow);
-    const installmentsUseCase = new InstallmentsUseCase(zapayService, authenticationUseCase.getTokenOrThrow);
-    const webhookRegisterUseCase = new WebhookRegisterUseCase(zapayService, authenticationUseCase.getTokenOrThrow);
-    const vehicleUseCase = new VehicleUseCase(zapayService, authenticationUseCase.getTokenOrThrow);
+    const checkOrderUseCase = new CheckOrderUseCase(
+      zapayService,
+      authenticationUseCase.getTokenOrThrow.bind(authenticationUseCase)
+    );
+    const checkoutUseCase = new CheckoutUseCase(
+      zapayService,
+      authenticationUseCase.getTokenOrThrow.bind(authenticationUseCase)
+    );
+    const confirmationUseCase = new ConfirmationUseCase(
+      zapayService,
+      authenticationUseCase.getTokenOrThrow.bind(authenticationUseCase)
+    );
+    const debtsUseCase = new DebtsUseCase(
+      zapayService,
+      authenticationUseCase.getTokenOrThrow.bind(authenticationUseCase)
+    );
+    const installmentsUseCase = new InstallmentsUseCase(
+      zapayService,
+      authenticationUseCase.getTokenOrThrow.bind(authenticationUseCase)
+    );
+    const webhookRegisterUseCase = new WebhookRegisterUseCase(
+      zapayService,
+      authenticationUseCase.getTokenOrThrow.bind(authenticationUseCase)
+    );
+    const vehicleUseCase = new VehicleUseCase(
+      zapayService,
+      authenticationUseCase.getTokenOrThrow.bind(authenticationUseCase)
+    );
 
     return new Zapay(
       authenticationUseCase,
